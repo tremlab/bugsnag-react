@@ -4,8 +4,7 @@ const Header = () => {
   return (
     <ul className="Header">
       <li className="Logo">Bugsnag React</li>
-      <li>Home</li>
-      <li>About</li>
+      <li>bundled example with webpack</li>
     </ul>
   );
 }

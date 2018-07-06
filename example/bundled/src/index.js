@@ -4,7 +4,7 @@ import bugsnag from 'bugsnag-js'
 // Initialize Bugsnag to begin tracking errors. Only an api key is required, but here are some other helpful configuration details:
 const bugsnagClient = bugsnag({
   // get your own api key at bugsnag.com
-  apiKey: 'YOUR_API_KEY',
+  apiKey: '4d8f0e94f59407b5ad49f186344c59ca',
 
   // if you track deploys or use source maps, make sure to set the correct version.
   appVersion: '1.2.3',
@@ -61,7 +61,11 @@ const beforeSend = (report) => {
 // You can provide a FallbackComponent to the ErrorBoundary which will be rendered if an error is encountered
 // It will be passed the `error` and `info` from the `componentDidCatch` method as props
 const FallbackComponent = (/* { error, info } */) => (
-  <div>An error has occurred</div>
+  <div>
+  <h2>An error has occurred</h2>
+  <p>But, because a FallbackComponent was set on your Bugsnag ErrorBoundary, you are seeing this nice component.  Plus, a detailed report of the exception has been sent to your Bugsnag dashboard!  Take a look: <a href="https://app.bugsnag.com">app.bugsnag.com</a></p>
+  <img src="https://blog.bugsnag.com/img/feature/shared-bookmarks.png"/>
+  </div>
 )
 
 // wrap your entire app tree in the ErrorBoundary provided
